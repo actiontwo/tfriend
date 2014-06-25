@@ -16,14 +16,21 @@ module.exports.adapters = {
 
   // If you leave the adapter config unspecified 
   // in a model definition, 'default' will be used.
-  'default': 'disk',
+  'default': 'mongo',
 
   // Persistent adapter for DEVELOPMENT ONLY
   // (data is preserved when the server shuts down)
   disk: {
     module: 'sails-disk'
   },
-
+  mongo: {
+    module: 'sails-mongo',
+    host: 'ds037778.mongolab.com',
+    port: 37778,
+    user: 'heroku_app26768594',
+    password: 'r2p8dpu1n59n3n4ihjdfen0u42',
+    database: 'heroku_app26768594'
+  },
   // MySQL is the world's most popular relational database.
   // Learn more: http://en.wikipedia.org/wiki/MySQL
   myLocalMySQLDatabase: {
